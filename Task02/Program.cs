@@ -10,6 +10,6 @@ Console.Write("Введите второе число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 if (num1 > num2)
 {
-    Console.Write($"Число {num1} больше чем число {num2}");
+    Console.Write($"Число {num1} больше, чем число {num2}");
 }
-else Console.Write($"Число {num2} больше чем число {num1}");
+else Console.Write($"Число {num2} больше, чем число {num1}");

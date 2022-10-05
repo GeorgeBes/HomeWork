@@ -19,19 +19,3 @@ if (n>=res)
         res = res + 2;
     }
 }
-
-
-
-// while (n>=1)
-// {
-
-// }
-
-
-// if (n>=1)
-// {
-//     res +=1;
-// }
-// while (res <= n)
-//     Console.Write($"Все числа {res}");
-//     res +=2;

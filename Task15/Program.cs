@@ -15,3 +15,7 @@ else if (day == 5) Console.WriteLine("Будний день");
 else if (day == 6) Console.WriteLine("Выходной");
 else if (day == 7) Console.WriteLine("Выходной");
 else Console.WriteLine("Под такой цифрой дня недели не бывает!");
+
+// Решение, которое прислал преподователь, намного упрощает
+// if (day == 6 || day == 7) Console.WriteLine("Выходной");
+// if (day >= 1 && day <= 5) Console.WriteLine("Будний день");

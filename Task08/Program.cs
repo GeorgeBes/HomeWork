@@ -13,7 +13,7 @@ Console.WriteLine("Все числа");
 if (n>=res)
 {
     res++;
-    while (res<n)
+    while (res<=n)
     {
         Console.Write($"{res}  ");
         res = res + 2;

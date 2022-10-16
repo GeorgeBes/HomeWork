@@ -8,17 +8,19 @@
 
 Console.WriteLine("Введите число и мы узнаем сумму цифр в числе: ");
 int digit = Convert.ToInt32(Console.ReadLine());
+Sum(digit);
 
-int Sum(int sum)
+void Sum(int sum)
 {
     int res = default;
     int num = default;
-    while (num > 0)
+    while (sum > 0) 
     {
-        int num = sum % 10;
-        sum = sum / 10;
-        res = res + num;
+        num = sum % 10; // 0
+        sum /= 10; // 9
+        res += num; //3
     }
-    return res;
-}
-int result = Console.WriteLine(Sum);
+    Console.WriteLine($"{sum}->{res}");
+}    
+
+

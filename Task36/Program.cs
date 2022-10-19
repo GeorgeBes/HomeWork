@@ -22,13 +22,25 @@ int[] CreateArrayRndInt(int size, int min, int max) // Метод для соз�
 void PrintArray(int[] array) // Метод печати массива
 {
     Console.Write("[");
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 1; i < array.Length; i++)
     {
         if (i < array.Length - 1) Console.Write($"{array[i]}, ");
         else Console.Write($"{array[i]}");
     }
-    Console.WriteLine("]");
+    Console.Write("]");
 }
 
-int[] arr = CreateArrayRndInt(10,-10,10);
+int SumOddPosition(int[] array)
+{
+    int result = default;
+    for (int i = 1; i < array.Length; i = i + 2)
+    {
+        result = result + array[i];
+    }
+    return result;
+}
+
+int[] arr = CreateArrayRndInt(5, -10, 20);
 PrintArray(arr);
+int sumOddPosition = SumOddPosition(arr);
+Console.Write($"-> {sumOddPosition}");

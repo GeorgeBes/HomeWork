@@ -1,4 +1,6 @@
-﻿// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+﻿// Задача 47. 
+// 1. Задайте двумерный массив размером m×n, 
+// 2. заполненный случайными вещественными числами.
 
 // m = 3, n = 4.
 
@@ -8,38 +10,38 @@
 
 // 8 7,8 -7,1 9
 
-int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
+double[,] CreateMatrixRndDbl(int rows, int columns, int min, int max)
 {
-    var matrix = new int[rows, columns];
+    var matrix = new double[rows, columns];
     var rnd = new Random();
 
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = rnd.Next(min, max + 1);
+            double rndNum = rnd.NextDouble() * (max - min) + min;
+            matrix[i, j] = Math.Round(rndNum, 1);
         }
     }
     return matrix;
 }
 
-void PrintMatrix(int[,] matrix)
+void PrintMatrix(double[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        Console.Write("|");
+        
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 4}, ");
-            else Console.Write($"{matrix[i, j], 4} ");
+            Console.Write($"{matrix[i, j],4} ");
+
         }
-        Console.WriteLine("|");
+        Console.WriteLine();
     }
 }
 
 
-
-int[,] arr2D = CreateMatrixRndInt(3, 4, -10, 10);
+double[,] arr2D = CreateMatrixRndDbl(3, 4, -10, 10);
 PrintMatrix(arr2D);
 
 

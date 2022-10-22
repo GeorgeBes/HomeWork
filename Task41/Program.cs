@@ -14,7 +14,7 @@ int[] CreateArray(int size)
     int[] array = new int[size];
     for (int i = 0; i < size; i++)
     {
-        Console.Write($"Введите {i+1}-е число и нажмите Enter: ");
+        Console.Write($"Введите {i + 1}-е число и нажмите Enter: ");
         array[i] = Convert.ToInt32(Console.ReadLine());
     }
     return array;
@@ -22,10 +22,10 @@ int[] CreateArray(int size)
 
 int SumNumbbers(int[] array)
 {
-    int count=default;
+    int count = default;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i]>0) count++;
+        if (array[i] > 0) count++;
     }
     return count;
 }
@@ -37,11 +37,11 @@ void PrintArray(int[] array)
         if (i < array.Length - 1) Console.Write($"{array[i]}, ");
         else Console.Write($"{array[i]}");
     }
-    
+
 }
 
-int[] createArr= CreateArray(quantityDigit);
+int[] createArr = CreateArray(quantityDigit);
 PrintArray(createArr);
-int sumNumbers= SumNumbbers(createArr);
+int sumNumbers = SumNumbbers(createArr);
 Console.Write($" -> {sumNumbers}");
 

@@ -7,3 +7,14 @@ Console.WriteLine("Введите целое число M");
 int numberM = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите целое число N");
 int numberN = Convert.ToInt32(Console.ReadLine());
+
+int SumNumbers(int num1, int num2)
+{
+    if (num1 > num2) return 0;
+    return num2 + SumNumbers(num1, num2 - 1);
+}
+
+int res = 0;
+if (numberM < numberN) res = SumNumbers(numberM, numberN);
+else res = SumNumbers(numberN, numberM);
+Console.WriteLine($"-> {res}");
